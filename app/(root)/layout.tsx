@@ -1,9 +1,8 @@
-import { HomeDefaultFooter, HomeDefaultNavbar } from "@/components/ui/public";
+import HomeDefaultNavbar from "@/components/home/HomeDefaultNavbar";
 
 export default function Layout({children}:{children:React.ReactNode}){
     return <main>
         <HomeDefaultNavbar />
         {children}
-        <HomeDefaultFooter />
     </main>
 }

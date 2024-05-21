@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function page() {
     return <main className="mx-auto flex flex-col">
-        <div className="w-full flex md:flex-row flex-col max-w-screen-lg mx-auto">
+        <div className="w-full flex md:flex-row flex-col screen-lg">
         <section className="md:w-full md:max-w-[400px]">
             <h1 className="m-0   screen-sm mx-auto p-4 text-[35px] my-0 font-bold text-slate-500">
                 Hi, User

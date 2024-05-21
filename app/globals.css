@@ -86,11 +86,14 @@
   .screen-small{
     @apply max-w-lg mx-auto w-full;
   }
+  .screen{
+    @apply max-w-[1200px] w-full mx-auto;
+  }
   .screen-sm{
     @apply max-w-2xl mt-3  mx-auto;
   }
   .screen-lg{
-    @apply max-w-4xl mt-3  mx-auto;
+    @apply max-w-screen-lg mx-auto;
   }
   .btnoutline{
     @apply bg-red-400 px-2 py-1 text-[20px]

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
-import {HomeDefaultNavbar,HomeDefaultFooter} from "@/components/ui/public/";
 
 const manrope = Manrope({ subsets: ["latin"] });
 

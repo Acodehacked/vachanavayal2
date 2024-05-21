@@ -23,7 +23,7 @@ export const AdminLoginTable = mysqlTable('AdminLogin', {
     username: varchar('username', { length: 256 }).notNull(),
     email: varchar('email', { length: 256 }).notNull(),
     password: varchar('password', { length: 256 }).notNull(),
-    last_login: timestamp("last_login").default(sql`CURRENT_TIMESTAMP`).$onUpdate(() => new Date()),
+    last_login: timestamp("last_login").default(sql`CURRENT_TIMESTAMP`).notNull(),
   }, (AdminLoginTable) => ({
     nameIndex: uniqueIndex('email_idx').on(AdminLoginTable.email),
     usernameIndex: uniqueIndex('username_idx').on(AdminLoginTable.username),
