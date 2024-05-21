@@ -1,17 +1,27 @@
 {
   "name": "vachanavayal2",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:gen": "drizzle-kit generate",
+    "db:migrate": "npx tsx ./db/migrate.ts",
+    "db:up": "drizzle-kit up",
+    "db:push": "drizzle-kit push",
+    "studio": "drizzle-kit studio",
+    "db:pull": "drizzle-kit introspect:mysql",
+    "db:check": "drizzle-kit check:mysql",
+    "db:seed": "npx tsx ./db/seed.ts"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.574.0",
     "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "dotenv": "^16.4.5",
     "framer-motion": "^11.0.8",
     "lucide-react": "^0.344.0",
     "next": "14.1.2",
@@ -26,8 +36,13 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
+    "drizzle-kit": "^0.21.1",
+    "drizzle-orm": "^0.30.10",
     "eslint": "^8",
     "eslint-config-next": "14.1.2",
+    "install": "^0.13.0",
+    "mysql2": "^3.9.7",
+    "npm": "^10.7.0",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"

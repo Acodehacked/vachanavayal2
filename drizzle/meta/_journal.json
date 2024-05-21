@@ -1,0 +1,13 @@
+{
+  "version": "1",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1716288289101,
+      "tag": "0000_rich_korg",
+      "breakpoints": true
+    }
+  ]
+}
