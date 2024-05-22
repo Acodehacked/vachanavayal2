@@ -1,4 +1,3 @@
---> statement-breakpoint
 CREATE TABLE `AdminLogin` (
 	`id` int AUTO_INCREMENT NOT NULL,
 	`type` varchar(20) NOT NULL,
