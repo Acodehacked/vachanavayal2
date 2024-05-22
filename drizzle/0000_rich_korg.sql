@@ -1,16 +1,16 @@
-CREATE TABLE `AdminLogin` (
-	`id` int AUTO_INCREMENT NOT NULL,
-	`type` varchar(20) NOT NULL,
-	`name` varchar(256) NOT NULL,
-	`username` varchar(256) NOT NULL,
-	`email` varchar(256) NOT NULL,
-	`password` varchar(256) NOT NULL,
-	`last_login` timestamp DEFAULT (now()),
-	CONSTRAINT `AdminLogin_id` PRIMARY KEY(`id`),
-	CONSTRAINT `email_idx` UNIQUE(`email`),
-	CONSTRAINT `username_idx` UNIQUE(`username`)
-);
---> statement-breakpoint
+-- CREATE TABLE `AdminLogin` (
+-- 	`id` int AUTO_INCREMENT NOT NULL,
+-- 	`type` varchar(20) NOT NULL,
+-- 	`name` varchar(256) NOT NULL,
+-- 	`username` varchar(256) NOT NULL,
+-- 	`email` varchar(256) NOT NULL,
+-- 	`password` varchar(256) NOT NULL,
+-- 	`last_login` timestamp DEFAULT (now()),
+-- 	CONSTRAINT `AdminLogin_id` PRIMARY KEY(`id`),
+-- 	CONSTRAINT `email_idx` UNIQUE(`email`),
+-- 	CONSTRAINT `username_idx` UNIQUE(`username`)
+-- );
+-- --> statement-breakpoint
 CREATE TABLE `QuestionsDb` (
 	`id` int AUTO_INCREMENT NOT NULL,
 	`book_id` int NOT NULL,
