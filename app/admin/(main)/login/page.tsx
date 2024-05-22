@@ -1,13 +1,16 @@
+import { AdminLoginSection } from "@/components/auth/AdminLoginSection";
 import { Input } from "@/components/ui/input";
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
 
-export default function Page() {
+export default async function Page() {
+    const session = await getServerSession();
+    if (session != null) {
+        redirect("/admin");
+    }
     return <main className="flex justify-center items-center min-h-[90vh]">
-        <div>
-            <h2>Admin Login</h2>
-            <div className="max-w-[400px] bg-white rounded-xl w-full px-4 py-5 mx-3">
-                <Input placeholder="Enter Username" className="outline-none" />
-                <Input placeholder="Enter Password" className="outline-none" />
-            </div>
+        <div className="w-full">
+            <AdminLoginSection />
         </div>
     </main>
 }
