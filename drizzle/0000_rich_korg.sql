@@ -38,7 +38,7 @@ CREATE TABLE `VachanavayalBooks` (
 	`random` boolean DEFAULT false,
 	`images` json NOT NULL DEFAULT ('[]'),
 	`for_sell` boolean NOT NULL DEFAULT true,
-	CONSTRAINT `VachanavayalBooks_id` PRIMARY KEY(`id`),
+	CONSTRAINT `VachanavayalBooks_id` PRIMARY KEY(`id`)
 );
 --> statement-breakpoint
 CREATE TABLE `varietyQuiz` (
