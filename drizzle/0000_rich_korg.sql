@@ -1,4 +1,4 @@
---> statement-breakpoint
+--> statement-breakpoint;
 CREATE TABLE `AdminLogin` (
 	`id` int AUTO_INCREMENT NOT NULL,
 	`type` varchar(20) NOT NULL,
@@ -11,7 +11,7 @@ CREATE TABLE `AdminLogin` (
 	CONSTRAINT `email_idx` UNIQUE(`email`),
 	CONSTRAINT `username_idx` UNIQUE(`username`)
 );
---> statement-breakpoint
+--> statement-breakpoint;
 CREATE TABLE `QuestionsDb` (
 	`id` int AUTO_INCREMENT NOT NULL,
 	`book_id` int NOT NULL,
@@ -28,7 +28,7 @@ CREATE TABLE `QuestionsDb` (
 	CONSTRAINT `QuestionsDb_id` PRIMARY KEY(`id`),
 	CONSTRAINT `title_idx` UNIQUE(`title`)
 );
---> statement-breakpoint
+--> statement-breakpoint;
 CREATE TABLE `VachanavayalBooks` (
 	`id` int AUTO_INCREMENT NOT NULL,
 	`order_no` int NOT NULL,
@@ -231,5 +231,6 @@ CREATE TABLE `user_logintable` (
 	CONSTRAINT `phone_idx` UNIQUE(`user_phone_number`)
 );
 --> statement-breakpoint
-ALTER TABLE `app_activities` ADD CONSTRAINT `app_activities_user_id_user_logintable_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user_logintable`(`id`) ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+ALTER TABLE `app_activities` ADD CONSTRAINT `app_activities_user_id_user_logintable_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user_logintable`(`id`) ON DELETE no action ON UPDATE no action;
+--> statement-breakpoint
 ALTER TABLE `app_quizlog` ADD CONSTRAINT `app_quizlog_user_id_user_logintable_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user_logintable`(`id`) ON DELETE no action ON UPDATE no action;
