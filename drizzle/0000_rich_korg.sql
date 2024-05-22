@@ -11,7 +11,7 @@ CREATE TABLE `AdminLogin` (
 	CONSTRAINT `email_idx` UNIQUE(`email`),
 	CONSTRAINT `username_idx` UNIQUE(`username`)
 );
--- > statement-breakpoint
+
 CREATE TABLE `QuestionsDb` (
 	`id` int AUTO_INCREMENT NOT NULL,
 	`book_id` int NOT NULL,
@@ -28,7 +28,7 @@ CREATE TABLE `QuestionsDb` (
 	CONSTRAINT `QuestionsDb_id` PRIMARY KEY(`id`),
 	CONSTRAINT `title_idx` UNIQUE(`title`)
 );
---> statement-breakpoint
+
 CREATE TABLE `VachanavayalBooks` (
 	`id` int AUTO_INCREMENT NOT NULL,
 	`order_no` int NOT NULL,
@@ -42,9 +42,6 @@ CREATE TABLE `VachanavayalBooks` (
 	CONSTRAINT `VachanavayalBooks_id` PRIMARY KEY(`id`),
 	CONSTRAINT `title_idx` UNIQUE(`title`)
 );
--- ALTER TABLE `varietyQuiz` MODIFY COLUMN `start_datetime` timestamp NOT NULL DEFAULT (now());--> statement-breakpoint
--- ALTER TABLE `varietyQuiz` MODIFY COLUMN `end_datetime` timestamp NOT NULL DEFAULT (now());
---> statement-breakpoint
 CREATE TABLE `varietyQuiz` (
 	`id` int DEFAULT 0,
 	`vType` text,
