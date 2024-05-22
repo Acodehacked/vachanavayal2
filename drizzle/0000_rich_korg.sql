@@ -11,23 +11,23 @@
 -- 	CONSTRAINT `username_idx` UNIQUE(`username`)
 -- );
 -- --> statement-breakpoint
-CREATE TABLE `QuestionsDb` (
-	`id` int AUTO_INCREMENT NOT NULL,
-	`book_id` int NOT NULL,
-	`chapter_no` int NOT NULL,
-	`title` varchar(256) NOT NULL,
-	`options` json NOT NULL DEFAULT ('[]'),
-	`correct_option` int NOT NULL,
-	`option_info` varchar(256) NOT NULL,
-	`subjects_list` json NOT NULL DEFAULT ('[]'),
-	`language` varchar(20),
-	`updated_on` date,
-	`attempted` int NOT NULL DEFAULT 0,
-	`corrected` int NOT NULL DEFAULT 0,
-	CONSTRAINT `QuestionsDb_id` PRIMARY KEY(`id`),
-	CONSTRAINT `title_idx` UNIQUE(`title`)
-);
---> statement-breakpoint
+-- CREATE TABLE `QuestionsDb` (
+-- 	`id` int AUTO_INCREMENT NOT NULL,
+-- 	`book_id` int NOT NULL,
+-- 	`chapter_no` int NOT NULL,
+-- 	`title` varchar(256) NOT NULL,
+-- 	`options` json NOT NULL DEFAULT ('[]'),
+-- 	`correct_option` int NOT NULL,
+-- 	`option_info` varchar(256) NOT NULL,
+-- 	`subjects_list` json NOT NULL DEFAULT ('[]'),
+-- 	`language` varchar(20),
+-- 	`updated_on` date,
+-- 	`attempted` int NOT NULL DEFAULT 0,
+-- 	`corrected` int NOT NULL DEFAULT 0,
+-- 	CONSTRAINT `QuestionsDb_id` PRIMARY KEY(`id`),
+-- 	CONSTRAINT `title_idx` UNIQUE(`title`)
+-- );
+-- --> statement-breakpoint
 CREATE TABLE `VachanavayalBooks` (
 	`id` int AUTO_INCREMENT NOT NULL,
 	`order_no` int NOT NULL,
@@ -39,7 +39,6 @@ CREATE TABLE `VachanavayalBooks` (
 	`images` json NOT NULL DEFAULT ('[]'),
 	`for_sell` boolean NOT NULL DEFAULT true,
 	CONSTRAINT `VachanavayalBooks_id` PRIMARY KEY(`id`),
-	CONSTRAINT `title_idx` UNIQUE(`title`)
 );
 --> statement-breakpoint
 CREATE TABLE `varietyQuiz` (
