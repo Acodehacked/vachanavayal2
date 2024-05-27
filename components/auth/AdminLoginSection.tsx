@@ -68,10 +68,10 @@ export function AdminLoginSection() {
     // ...
 
     return (
-        <div className="min-h-[90vh] h-full items-center bg-zinc-50 flex justify-center flex-col">
+        <div className="min-h-[100vh] h-full items-center bg-zinc-50 flex justify-center flex-col">
             {/* <div className="max-w-[400px] w-full p-4">
             </div> */}
-            <div className=" mt-[-100px] bg-white rounded-sm shadow-zinc-200 shadow-[0px_0px_50px] items-center h-full max-w-[400px] w-full space-y-3">
+            <div className=" mt-[-50px] bg-white rounded-sm shadow-zinc-200 shadow-[0px_0px_50px] items-center h-full max-w-[400px] w-full space-y-3">
                 <div className="flex items-center">
                     <Image src={'/assets/images/app_logo.png'} alt="App logo" className='ms-3' width={50} height={50} />
                     <div className="px-4 pt-3">

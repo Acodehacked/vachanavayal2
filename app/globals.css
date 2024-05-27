@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
  
+:root{
+  /* background-color: hsl(0, 0%, 11%); */
+}
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -87,7 +90,7 @@
     @apply max-w-lg mx-auto w-full;
   }
   .screen{
-    @apply max-w-[1200px] w-full mx-auto;
+    @apply max-w-[1000px] w-full mx-auto;
   }
   .screen-sm{
     @apply max-w-2xl mt-3  mx-auto;

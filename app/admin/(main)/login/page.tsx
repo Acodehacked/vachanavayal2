@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 
 export default async function Page() {
     const session = await getServerSession();
-    if (session != null) {
+    if (session?.user != null) {
         redirect("/admin");
     }
     return <main className="flex justify-center items-center min-h-[90vh]">

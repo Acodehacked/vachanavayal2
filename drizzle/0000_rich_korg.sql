@@ -1,33 +1,33 @@
--- CREATE TABLE `AdminLogin` (
--- 	`id` int AUTO_INCREMENT NOT NULL,
--- 	`type` varchar(20) NOT NULL,
--- 	`name` varchar(256) NOT NULL,
--- 	`username` varchar(256) NOT NULL,
--- 	`email` varchar(256) NOT NULL,
--- 	`password` varchar(256) NOT NULL,
--- 	`last_login` timestamp DEFAULT (now()),
--- 	CONSTRAINT `AdminLogin_id` PRIMARY KEY(`id`),
--- 	CONSTRAINT `email_idx` UNIQUE(`email`),
--- 	CONSTRAINT `username_idx` UNIQUE(`username`)
--- );
--- --> statement-breakpoint
--- CREATE TABLE `QuestionsDb` (
--- 	`id` int AUTO_INCREMENT NOT NULL,
--- 	`book_id` int NOT NULL,
--- 	`chapter_no` int NOT NULL,
--- 	`title` varchar(256) NOT NULL,
--- 	`options` json NOT NULL DEFAULT ('[]'),
--- 	`correct_option` int NOT NULL,
--- 	`option_info` varchar(256) NOT NULL,
--- 	`subjects_list` json NOT NULL DEFAULT ('[]'),
--- 	`language` varchar(20),
--- 	`updated_on` date,
--- 	`attempted` int NOT NULL DEFAULT 0,
--- 	`corrected` int NOT NULL DEFAULT 0,
--- 	CONSTRAINT `QuestionsDb_id` PRIMARY KEY(`id`),
--- 	CONSTRAINT `title_idx` UNIQUE(`title`)
--- );
--- --> statement-breakpoint
+CREATE TABLE `AdminLogin` (
+	`id` int AUTO_INCREMENT NOT NULL,
+	`type` varchar(20) NOT NULL,
+	`name` varchar(256) NOT NULL,
+	`username` varchar(256) NOT NULL,
+	`email` varchar(256) NOT NULL,
+	`password` varchar(256) NOT NULL,
+	`last_login` timestamp DEFAULT (now()),
+	CONSTRAINT `AdminLogin_id` PRIMARY KEY(`id`),
+	CONSTRAINT `email_idx` UNIQUE(`email`),
+	CONSTRAINT `username_idx` UNIQUE(`username`)
+);
+--> statement-breakpoint
+CREATE TABLE `QuestionsDb` (
+	`id` int AUTO_INCREMENT NOT NULL,
+	`book_id` int NOT NULL,
+	`chapter_no` int NOT NULL,
+	`title` varchar(256) NOT NULL,
+	`options` json NOT NULL DEFAULT ('[]'),
+	`correct_option` int NOT NULL,
+	`option_info` varchar(256) NOT NULL,
+	`subjects_list` json NOT NULL DEFAULT ('[]'),
+	`language` varchar(20),
+	`updated_on` date,
+	`attempted` int NOT NULL DEFAULT 0,
+	`corrected` int NOT NULL DEFAULT 0,
+	CONSTRAINT `QuestionsDb_id` PRIMARY KEY(`id`),
+	CONSTRAINT `title_idx` UNIQUE(`title`)
+);
+--> statement-breakpoint
 CREATE TABLE `VachanavayalBooks` (
 	`id` int AUTO_INCREMENT NOT NULL,
 	`order_no` int NOT NULL,
