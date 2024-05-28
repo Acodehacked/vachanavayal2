@@ -1,5 +1,6 @@
 import { getDb2 } from "@/db"
 import { VachanavayalBooksTable } from "@/db/schema/adminPanel";
+import Books from "./books";
 
 export default async function Page(){
     const {db,connection}  = await getDb2();
