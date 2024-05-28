@@ -1,8 +1,8 @@
 {
   "version": "5",
   "dialect": "mysql",
-  "id": "6e5cf0e9-dd75-456c-bba2-e47869d760c0",
-  "prevId": "48f65f7d-d54c-417b-a29f-a4bf72c380c0",
+  "id": "d36fb03e-09c0-44cc-9d49-c1f4d2ce898e",
+  "prevId": "6e5cf0e9-dd75-456c-bba2-e47869d760c0",
   "tables": {
     "AdminLogin": {
       "name": "AdminLogin",
@@ -53,7 +53,7 @@
           "name": "last_login",
           "type": "timestamp",
           "primaryKey": false,
-          "notNull": false,
+          "notNull": true,
           "autoincrement": false,
           "default": "CURRENT_TIMESTAMP"
         }
@@ -342,7 +342,7 @@
           "primaryKey": false,
           "notNull": true,
           "autoincrement": false,
-          "default": "'2024-05-21'"
+          "default": "'2024-05-28'"
         },
         "syllabus": {
           "name": "syllabus",
@@ -1402,7 +1402,7 @@
           "primaryKey": false,
           "notNull": true,
           "autoincrement": false,
-          "default": "'2024-05-21'"
+          "default": "'2024-05-28'"
         },
         "user_gender": {
           "name": "user_gender",
@@ -1432,6 +1432,46 @@
           "primaryKey": false,
           "notNull": false,
           "autoincrement": false
+        },
+        "premium_membership": {
+          "name": "premium_membership",
+          "type": "json",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "('[]')"
+        },
+        "logos_membership": {
+          "name": "logos_membership",
+          "type": "json",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "('[]')"
+        },
+        "twentytwenty_membership": {
+          "name": "twentytwenty_membership",
+          "type": "json",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "('[]')"
+        },
+        "ebook_membership": {
+          "name": "ebook_membership",
+          "type": "json",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "('[]')"
+        },
+        "publication": {
+          "name": "publication",
+          "type": "json",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "('[]')"
         }
       },
       "indexes": {

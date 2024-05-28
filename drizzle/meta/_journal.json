@@ -8,6 +8,13 @@
       "when": 1716288289101,
       "tag": "0000_rich_korg",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1716883830722,
+      "tag": "0001_yellow_magus",
+      "breakpoints": true
     }
   ]
 }

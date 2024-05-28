@@ -16,7 +16,11 @@ import {
 } from 'drizzle-orm/mysql-core';
 
 
-
+type PremiumType = {
+  addedAt: Date | string | number,
+  validAt: Date | string | number,
+  values:  number[] | string[],
+} | [];
 export const user_logintable = mysqlTable('user_logintable', {
     id: int('id').primaryKey().autoincrement(),
     name: varchar('user_name', { length: 256 }).notNull(),
@@ -33,7 +37,12 @@ export const user_logintable = mysqlTable('user_logintable', {
     gender: text('user_gender',{enum:['male','female']}),
     last_login: timestamp("last_login").default(sql`CURRENT_TIMESTAMP`).$onUpdate(() => new Date()),
     rdm_code: text('recovery_code'),
-    device: varchar('user_device',{length:255})
+    device: varchar('user_device',{length:255}),
+    premium: json('premium_membership').$type<PremiumType>().notNull().default([]),
+    logos: json('logos_membership').$type<PremiumType>().notNull().default([]),
+    twentyTwenty: json('twentytwenty_membership').$type<PremiumType>().notNull().default([]),
+    ebooks: json('ebook_membership').$type<PremiumType>().notNull().default([]),
+    publications: json('publication').$type<PremiumType>().notNull().default([]),
   }, (user_logintable) => ({
     emailIndex: uniqueIndex('email_idx').on(user_logintable.email),
     phoneIndex: uniqueIndex('phone_idx').on(user_logintable.phone),
