@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${manrope.className} bg-zinc-100`}>
+      <body className={`${manrope.className} bg-zinc-200`}>
         <SnackbarContextProvider>
           {children}
         </SnackbarContextProvider>

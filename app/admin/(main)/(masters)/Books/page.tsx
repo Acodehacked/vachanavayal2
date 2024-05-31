@@ -7,7 +7,7 @@ export default async function Page(){
     const books = await db.select().from(VachanavayalBooksTable).orderBy(VachanavayalBooksTable.id);
     connection.end();
     return <main className="screen">
-        <h3 className="text-[24px] font-semibold">All Books</h3>
-        {books.toString()}
+        <h3 className="text-[32px] font-semibold px-6">All Books</h3>
+        <Books data={books} />
     </main>
 }

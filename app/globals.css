@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -37,7 +38,9 @@
  
     --radius: 0.5rem;
   }
- 
+  .mal{
+    font-family: "Noto Sans Malayalam",sans-serif;
+  }
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;

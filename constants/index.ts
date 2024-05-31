@@ -37,7 +37,7 @@ export const AdminNavbar = [
             },
             {
                 title: 'All Books Bank',
-                link:'/Verses/All',
+                link:'/Books',
                 sub:[
                     {
                         title:'English Books',

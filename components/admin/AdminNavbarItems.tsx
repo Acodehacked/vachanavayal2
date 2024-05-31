@@ -41,7 +41,7 @@ const AdminNavbarItems = ({ session }: { session: Session | null }) => {
                             </div>
                             {item.sub.length > 0 && <div className='md:absolute relative opacity-0  md:shadow-2xl right-0 z-[999] md:top-[80%] md:group-hover/top:top-full group-hover/top:pointer-events-auto pointer-events-none transition-all group-hover/top:opacity-100 md:group-hover/top:h-auto h-0 md:h-auto group-hover/top:h-auto md:bg-white bg-zinc-800  rounded-md group-hover/top:p-1 md:w-max w-full max-w-[400px] md:text-zinc-900 text-white font-semibold '>
                                 {item.sub.map((subitem, index) => {
-                                    return <Link className='flex group/sub flex-col relative w-full justify-between ps-3 pe-3 py-2 gap-2 items-center rounded-md md:hover:bg-zinc-100 hover:bg-zinc-900' href={subitem.link} key={index}>
+                                    return <Link className='flex group/sub flex-col relative w-full justify-between ps-3 pe-3 py-2 gap-2 items-center rounded-md md:hover:bg-zinc-100 hover:bg-zinc-900' href={'/admin'+subitem.link} key={index}>
                                         <div className='flex gap-2 me-3 justify-between w-full items-center'>
                                             <div className='flex gap-2 me-3 md:w-auto w-full items-center'>
                                                 <i className='bx bx-book-alt  text-[15px] ' />
@@ -51,7 +51,7 @@ const AdminNavbarItems = ({ session }: { session: Session | null }) => {
                                         </div>
                                         {subitem.sub.length > 0 && <div className='md:absolute relative opacity-0  md:shadow-2xl right-0 md:right-full z-[999] md:top-[-50%] md:group-hover/sub:top-0 group-hover/sub:pointer-events-auto pointer-events-none transition-all group-hover/sub:opacity-100 md:group-hover/sub:h-auto h-0 md:h-auto group-hover/sub:h-auto md:bg-white bg-zinc-800  rounded-md group-hover/sub:p-1 md:w-max w-full max-w-[400px] md:text-zinc-900 text-white font-semibold '>
                                             {subitem.sub.length > 0 && subitem.sub.map((subsubitem, index) => {
-                                                return <Link className='flex relative w-full justify-between ps-3 pe-3 py-2 gap-2 items-center rounded-md hover:bg-zinc-900 md:hover:bg-zinc-100' href={subsubitem.link} key={index}>
+                                                return <Link className='flex relative w-full justify-between ps-3 pe-3 py-2 gap-2 items-center rounded-md hover:bg-zinc-900 md:hover:bg-zinc-100' href={'/admin'+subsubitem.link} key={index}>
                                                     <div className='flex gap-2 me-3 items-center'>
                                                         <i className='bx bx-link-alt  text-[15px]' />
                                                         <span className='text-[14px]'>{subsubitem.title}</span>

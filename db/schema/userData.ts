@@ -21,6 +21,12 @@ type PremiumType = {
   validAt: Date | string | number,
   values:  number[] | string[],
 } | [];
+
+const sample:PremiumType = {
+  addedAt: '28-05-2024',
+  validAt: '28-05-2024',
+  values: []
+}
 export const user_logintable = mysqlTable('user_logintable', {
     id: int('id').primaryKey().autoincrement(),
     name: varchar('user_name', { length: 256 }).notNull(),
