@@ -1,0 +1,29 @@
+name: Deploying
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add directory to PATH
+        run: echo "/home/ubuntu/.nvm/versions/node/v21.7.3/bin/pm2" >> $GITHUB_PATH 
+        
+      - name: Add Npm directory to PATH
+        run: echo "/home/ubuntu/.nvm/versions/node/v21.7.3/bin/npm" >> $GITHUB_PATH 
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: Executing remote ssh commands using ssh key
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST_DNS }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+              bash ./vachanavayal2.sh
