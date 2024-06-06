@@ -18,13 +18,15 @@ async function POST(req: NextRequest) {
                 if(item.cc == getcc){
                     return NextResponse.json({
                         status: 'success',
-                        data: 'Hurray! your number is already registererd'
+                        data: 'Hurray! your number is already registererd',
+                        users:data
                     });
                 }
             })
             return NextResponse.json({
                 status: 'error',
-                data: 'we didn\'t find your number'
+                data: 'we didn\'t find your number',
+                users: data
             });
         }
     }catch(e){
