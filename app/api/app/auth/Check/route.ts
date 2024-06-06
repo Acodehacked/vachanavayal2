@@ -32,7 +32,7 @@ async function POST(req: NextRequest) {
     }catch(e){
         return NextResponse.json({
             status: 'error',
-            data: 'we didn\'t find your number'
+            data: 'erro getting data'
         });
     }
 }
