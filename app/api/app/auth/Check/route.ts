@@ -9,7 +9,7 @@ async function POST(req: NextRequest) {
         const reqdata = await req.json();
         const getcc = reqdata['cc'] as string;
         const getphone = reqdata['phone'] as string;
-        const getapp = reqdata['from_app'] as Boolean;
+        // const getapp = reqdata['from_app'] as string;
         const { db, connection } = await getDb2();
         const data = await db.select().from(user_logintable).where(eq(user_logintable.phone,getphone));
         connection.end();
