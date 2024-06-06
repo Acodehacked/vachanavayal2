@@ -3,8 +3,7 @@ name: Deploying
 on:
   push:
     branches:
-      - main
-
+      - master
 jobs:
   deploy:
     name: Deploy
@@ -26,4 +25,4 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-              bash ./vachanavayal2.sh
+              bash ./vachanavayal.sh
