@@ -28,12 +28,18 @@ async function POST(req: NextRequest) {
             });
         }
     }catch(e){
-
+        return NextResponse.json({
+            status: 'error',
+            data: 'we didn\'t find your number'
+        });
     }
 }
 
 
 async function GET(req: NextRequest) {
-   
+    return NextResponse.json({
+        status: 'error',
+        data: 'we didn\'t find your number'
+    });
 }
 export { POST, GET }
