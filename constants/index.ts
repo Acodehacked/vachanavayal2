@@ -40,16 +40,16 @@ export const AdminNavbar = [
                 link:'/Books',
                 sub:[
                     {
-                        title:'English Books',
-                        link:'/Verses/English',
+                        title:'All Books',
+                        link:'/Books',
                     },
                     {
-                        title:'Malayalam Books',
-                        link:'/Verses/English',
+                        title:'Bible Books',
+                        link:'/Books/Bible',
                     },
                     {
                         title:'Variety Books',
-                        link:'/Verses/English',
+                        link:'/Books/Others',
                     }
                 ]
             },

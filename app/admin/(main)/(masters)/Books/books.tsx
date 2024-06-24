@@ -34,7 +34,7 @@ import {
 } from "@tanstack/react-table"
 import { Button } from '@/components/ui/button';
 import { ChevronDown } from "lucide-react"
-import { BiBookAdd, BiEdit, BiTrash } from "react-icons/bi"
+import { BiBookAdd, BiEdit, BiSpreadsheet, BiTrash } from "react-icons/bi"
 import { IoMdAddCircle } from "react-icons/io"
 type BookType = {
     id: number;
@@ -81,6 +81,7 @@ export const columns: ColumnDef<BookType>[] = [
     },
     {
         accessorKey: "title",
+        enableHiding: true,
         header: "Title",
         cell: ({ row }) => (
             <div className="capitalize font-semibold">{JSON.parse(row.getValue("title") as string)[0]}</div>
@@ -95,10 +96,10 @@ export const columns: ColumnDef<BookType>[] = [
         ),
     },
     {
-        accessorKey: "type",
-        header: "Type",
+        accessorKey: "chapters",
+        header: "No.of Chapters",
         cell: ({ row }) => (
-            <div className="capitalize font-semibold">{row.getValue("type")}</div>
+            <div className="capitalize font-semibold">{row.getValue("chapters")}</div>
         ),
     },
     {
@@ -156,7 +157,7 @@ const Books = ({ data }: {
         <div className="w-full">
             <div className="flex justify-between md:flex-row flex-col items-center py-4 gap-5">
                 <Input
-                    placeholder="Filter emails..."
+                    placeholder="Filter books..."
                     value={(table.getColumn("title")?.getFilterValue() as string) ?? ""}
                     onChange={(event: any) =>
                         table.getColumn("title")?.setFilterValue(event.target.value)
@@ -164,7 +165,7 @@ const Books = ({ data }: {
                     className="max-w-sm mal"
                 />
                 <div className="flex  gap-4">
-                    <DropdownMenu>
+                    {/* <DropdownMenu>
                         <DropdownMenuTrigger asChild>
                             <Button variant="outline" className="ml-auto">
                                 Columns <ChevronDown className="ml-2 h-4 w-4" />
@@ -189,9 +190,12 @@ const Books = ({ data }: {
                                     )
                                 })}
                         </DropdownMenuContent>
-                    </DropdownMenu>
+                    </DropdownMenu> */}
                     <Button className="flex gap-3">
                         Add <IoMdAddCircle className="text-white" size={19} />
+                    </Button>
+                    <Button className="flex gap-3 bg-green-700 hover:bg-green-950">
+                        Import <BiSpreadsheet className="text-white" size={19} />
                     </Button>
                 </div>
             </div>

@@ -6,13 +6,24 @@ import { user_logintable } from "./schema/userData";
 async function main() {
     const {db,connection} = await getDb2();
     var password = '';
-    bcrypt.hash('abinantony@kattady', 10).then(async (result: string) => {
+    // bcrypt.hash('abinantony@kattady', 10).then(async (result: string) => {
+    //     password = result || "Abianin";
+    //     await db.insert(AdminLoginTable).values({
+    //         name: 'Abin Antony',
+    //         type: 'VA',
+    //         username: 'abinantony@kattady',
+    //         email: 'abina5448@gmail.com',
+    //         password: password,
+    //     })
+    //     console.log("Seeded successfully")
+    // })
+    bcrypt.hash('admin@vachanavayal', 10).then(async (result: string) => {
         password = result || "Abianin";
         await db.insert(AdminLoginTable).values({
-            name: 'Abin Antony',
+            name: 'Main Admin',
             type: 'VA',
-            username: 'abinantony@kattady',
-            email: 'abina5448@gmail.com',
+            username: 'bibliya2024@gmail.com',
+            email: 'bibliya2024@gmail.com',
             password: password,
         })
         console.log("Seeded successfully")
