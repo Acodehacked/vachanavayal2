@@ -81,19 +81,20 @@ export const columns: ColumnDef<BookType>[] = [
     },
     {
         accessorKey: "title",
-        enableHiding: true,
         header: "Title",
-        cell: ({ row }) => (
-            <div className="capitalize font-semibold">{JSON.parse(row.getValue("title") as string)[0]}</div>
-        ),
+        cell: ({ row }) => {
+            var value = (row.getValue("title") as string).split(',');
+            return <div className="capitalize font-semibold">{value[0]}</div>
+        },
     },
     {
         accessorKey: "title",
         enableSorting: true,
         header: "Title",
-        cell: ({ row }) => (
-            <div className="capitalize font-semibold mal">{JSON.parse(row.getValue("title") as string)[1]}</div>
-        ),
+        cell: ({ row }) => {
+            var value = (row.getValue("title") as string).split(',');
+            return <div className="capitalize font-semibold">{value[1]}</div>
+        },
     },
     {
         accessorKey: "chapters",
