@@ -83,8 +83,7 @@ export const columns: ColumnDef<BookType>[] = [
         accessorKey: "title",
         header: "Title",
         cell: ({ row }) => {
-            var value = (row.getValue("title") as string).split(',');
-            return <div className="capitalize font-semibold">{value[0]}</div>
+            return <div className="capitalize font-semibold">{(row.getValue("title") as string).split(',')[0]}</div>
         },
     },
     {
@@ -92,8 +91,7 @@ export const columns: ColumnDef<BookType>[] = [
         enableSorting: true,
         header: "Title",
         cell: ({ row }) => {
-            var value = (row.getValue("title") as string).split(',');
-            return <div className="capitalize font-semibold">{value[1]}</div>
+            return <div className="capitalize font-semibold">{(row.getValue("title") as string).split(',')[1]}</div>
         },
     },
     {
