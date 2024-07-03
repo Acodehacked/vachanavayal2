@@ -36,6 +36,7 @@ import { Button } from '@/components/ui/button';
 import { ChevronDown } from "lucide-react"
 import { BiBookAdd, BiEdit, BiSpreadsheet, BiTrash } from "react-icons/bi"
 import { IoMdAddCircle } from "react-icons/io"
+import { ColumnAliasProxyHandler } from "drizzle-orm"
 type BookType = {
     id: number;
     order_no: number;
@@ -92,7 +93,9 @@ export const columns: ColumnDef<BookType>[] = [
         enableSorting: true,
         header: "Title",
         cell: ({ row }) => {
-            return <div className="capitalize font-semibold">{(row.getValue("title") as string).split(',')[1]}</div>
+            console.log(row.getValue('title'))
+            // return <div className="capitalize font-semibold">{(row.getValue("title") as string).split(',')[1]}</div>
+            return <div className="capitalize font-semibold">{(row.getValue("title") as unknown as string[])[1]}</div>
         },
     },
     {
