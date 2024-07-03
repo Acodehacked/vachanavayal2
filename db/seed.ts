@@ -4,7 +4,7 @@ import { AdminLoginTable } from "./schema/adminPanel";
 import { user_logintable } from "./schema/userData";
 
 async function main() {
-    const {db,connection} = await getDb2();
+    const { db, connection } = await getDb2();
     var password = '';
     // bcrypt.hash('abinantony@kattady', 10).then(async (result: string) => {
     //     password = result || "Abianin";
@@ -22,10 +22,11 @@ async function main() {
         await db.insert(AdminLoginTable).values({
             name: 'Main Admin',
             type: 'VA',
-            username: 'bibliya2024@gmail.com',
-            email: 'bibliya2024@gmail.com',
+            username: 'bibliya2025@gmail.com',
+            email: 'bibliya2025@gmail.com',
             password: password,
         })
+        connection.end();
         console.log("Seeded successfully")
     })
     // await db.insert(user_logintable).values({
@@ -67,6 +68,5 @@ async function main() {
     //         values: []
     //     }
     // })
-    connection.end();
 }
 main();

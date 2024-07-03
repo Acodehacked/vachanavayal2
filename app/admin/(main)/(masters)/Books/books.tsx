@@ -83,7 +83,8 @@ export const columns: ColumnDef<BookType>[] = [
         accessorKey: "title",
         header: "Title",
         cell: ({ row }) => {
-            return <div className="capitalize font-semibold">{(row.getValue("title") as string).split(',')[0]}</div>
+            // return <div className="capitalize font-semibold">{(row.getValue("title") as string).split(',')[0]}</div>
+             return <div className="capitalize font-semibold">{(row.getValue("title") as unknown as string[])[0]}</div>
         },
     },
     {
