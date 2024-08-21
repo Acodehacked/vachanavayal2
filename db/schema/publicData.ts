@@ -67,6 +67,6 @@ export const VideoBookTable = mysqlTable('vachanavideoBook', {
   subjectId: int('subject_id').notNull(),
   topicId: int('topic_id').notNull(),
   programmeId: int('programme_id').notNull(),
-  link: varchar('title', { length: 5000 }).notNull(),
+  link: varchar('link', { length: 5000 }).notNull(),
   updatedAt: timestamp('updated_at').defaultNow().onUpdateNow(),
 });
