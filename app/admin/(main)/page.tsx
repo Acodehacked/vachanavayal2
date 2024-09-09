@@ -7,8 +7,8 @@ export default async function Page(){
     if (session?.user == null) {
         redirect("/admin/login");
     }
-    return <main className="flex flex-col px-5  screen min-h-[95vh]"> 
-        <h3 className="text-[23px] font-bold">Dashboard</h3>
+    return <main className="flex flex-col px-5 pt-4 screen h-full"> 
+        <h3 className="text-[43px] font-bold">Dashboard</h3>
         <div className="grid grid-cols-3 gap-3 mt-3">
             <div className="bg-white p-3 shadow-xl rounded-sm">
                 <h3>Total Users</h3>

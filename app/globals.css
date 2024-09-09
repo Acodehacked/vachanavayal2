@@ -93,7 +93,7 @@
     @apply max-w-lg mx-auto w-full;
   }
   .screen{
-    @apply max-w-[1000px] w-full mx-auto;
+    @apply max-w-[1400px] w-full mx-auto;
   }
   .screen-sm{
     @apply max-w-2xl mt-3  mx-auto;

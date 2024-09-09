@@ -1,1 +1,0 @@
-ALTER TABLE `vachanavideoBook_sections` ADD CONSTRAINT `title_idx` UNIQUE(`title`);

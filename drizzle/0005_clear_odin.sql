@@ -1,1 +1,0 @@
-ALTER TABLE `vachanavideoBook_sections` DROP INDEX `title_idx`;
